@@ -1,0 +1,181 @@
+:root {
+  --primary: #000000;
+  --secondary: #ABECFD;
+  --text-light: #ffffff;
+  --text-muted: #888888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 0 1rem;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid var(--secondary);
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.union-logo {
+  height: 28px;
+}
+
+.union-text {
+  font-family: 'Supermolot Bold', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+.gallery-title {
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* MAIN */
+.main-content {
+  margin: 2rem auto;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* REQUEST CARD */
+.request-card {
+  border: 1px solid var(--secondary);
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.request-card h2 {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.request-link {
+  font-weight: bold;
+  color: var(--text-light);
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+/* ARTWORK GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* ARTWORK CARD */
+.artwork-card {
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.artwork-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.artwork-card h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* BUTTON ROW */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.download-btn,
+.like-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.download-btn {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+}
+
+.like-btn {
+  background-color: transparent;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 3rem 0 2rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .gallery-title {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .union-text {
+    font-size: 1.3rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
