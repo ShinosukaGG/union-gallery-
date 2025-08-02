@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("artworks-container");
 
-  const totalArtworks = 53; // Total artwork count
-  const newArtworks = Array.from({ length: 17 }, (_, i) => i + 37); // [37, 38, ..., 53]
+  const totalArtworks = 79; // Total number of artworks
+  const newArtworks = Array.from({ length: 26 }, (_, i) => i + 54); // New ones: 54 to 79
 
   for (let i = 1; i <= totalArtworks; i++) {
     const card = document.createElement("div");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonRow.appendChild(likeBtn);
     card.appendChild(buttonRow);
 
-    // Place new artworks at top
+    // Insert new artworks at top
     if (newArtworks.includes(i)) {
       container.prepend(card);
     } else {
