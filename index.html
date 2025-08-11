@@ -2,36 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shinosuka's Union Gallery</title>
+  <!-- Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <!-- HEADER -->
-  <header class="header">
+  <header class="site-header" role="banner">
     <div class="header-left">
-      <img src="badge3.png" alt="Union Logo" class="union-logo" />
-      <span class="union-text">UNION</span>
+      <img src="union-logo.png" class="union-logo" alt="Union logo" />
+      <span class="union-wordmark" aria-label="UNION">UNION</span>
     </div>
-    <a href="https://x.com/shinosuka_eth" target="_blank" class="gallery-title">Shinosuka's Union Gallery</a>
+
+    <a
+      class="site-title"
+      href="https://x.com/shinosuka_eth"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Go to Shinosuka on X"
+    >
+      Shinosuka's Union Gallery
+    </a>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-    <!-- REQUEST CARD -->
-    <div class="request-card">
-      <h2>Have a request for Union artworks?</h2>
-      <a href="https://x.com/messages/compose?recipient_id=shinosuka_eth" target="_blank" class="request-link">Let Me Know</a>
-    </div>
+  <!-- MAIN -->
+  <main class="site-main" role="main">
+    <!-- Request Card (full-width, first) -->
+    <section class="request-card" aria-labelledby="request-heading">
+      <h2 id="request-heading">Have a request for Union artworks?</h2>
+      <a
+        class="request-link"
+        href="https://x.com/messages/compose?recipient_id=shinosuka_eth"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Let Me Know
+      </a>
+    </section>
 
-    <!-- ARTWORK CARDS -->
-    <div id="artworks-container" class="gallery-grid"></div>
+    <!-- Gallery Grid -->
+    <section class="gallery" aria-label="Union artworks">
+      <div id="artworks-container" class="gallery-grid">
+        <!-- JS injects cards here -->
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="site-footer" role="contentinfo">
     <p><i>All the artworks are free to use in any content creation related Union. Create more content and become a Mad Yapper.</i></p>
   </footer>
+
+  <noscript>
+    Please enable JavaScript to view the gallery.
+  </noscript>
 </body>
 </html>
